@@ -18,7 +18,7 @@ RUN cd /tmp \
 
 # install wyoming-faster-whisper and nvidia cuda libs
 RUN python3 -m pip install --no-cache-dir --break-system-packages "wyoming-faster-whisper @ https://github.com/rhasspy/wyoming-faster-whisper/archive/refs/tags/v${WYOMING_FASTER_WHIPSER_VERSION}.tar.gz" \
-    && python3 -m pip install --no-cache-dir --break-system-packages nvidia-cublas-cu12 nvidia-cudnn-cu12==9.*
+    && python3 -m pip install --no-cache-dir --break-system-packages nvidia-cublas-cu12==12.8.4.1 nvidia-cudnn-cu12==9.*
 
 EXPOSE 10300/tcp
 VOLUME [ "/data" ]
